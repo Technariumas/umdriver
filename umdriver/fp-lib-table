@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name "umdriver")(type "KiCad")(uri "/home/miceuz/Xaltura/universal-motor-driver/umdriver.pretty")(options "")(descr ""))
+)

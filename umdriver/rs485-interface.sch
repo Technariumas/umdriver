@@ -1,0 +1,213 @@
+EESchema Schematic File Version 5
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 4
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+Comment5 ""
+Comment6 ""
+Comment7 ""
+Comment8 ""
+Comment9 ""
+$EndDescr
+Connection ~ 4350 3075
+Connection ~ 4650 3375
+Connection ~ 4650 4200
+Connection ~ 6275 3525
+Wire Wire Line
+	4350 3075 4450 3075
+Wire Wire Line
+	4650 4100 4650 4200
+Wire Wire Line
+	4650 4200 4650 4350
+Wire Wire Line
+	5675 4225 5875 4225
+Wire Wire Line
+	5675 4425 5675 4225
+Wire Wire Line
+	6275 3725 6275 3525
+Wire Wire Line
+	6275 4725 6275 4525
+Wire Wire Line
+	4100 3075 4350 3075
+Wire Wire Line
+	6275 3075 6525 3075
+Wire Wire Line
+	4350 3375 4650 3375
+Wire Wire Line
+	4650 3700 4650 3375
+Wire Wire Line
+	5475 4325 5875 4325
+Wire Wire Line
+	6275 3525 6275 3075
+Wire Wire Line
+	5475 3825 5475 4325
+Wire Wire Line
+	6675 4025 7175 4025
+Wire Wire Line
+	6675 4225 7175 4225
+Wire Wire Line
+	4050 4200 4650 4200
+Wire Wire Line
+	5675 4725 6275 4725
+Wire Wire Line
+	5475 3525 6275 3525
+Text Label 7175 4025 2    60   ~ 0
+RS485A
+Text Label 7175 4225 2    60   ~ 0
+RS485B
+Text HLabel 4050 3900 0    50   Input ~ 0
+ENABLE
+Text HLabel 4100 3075 0    50   Input ~ 0
+BATT
+Text HLabel 4650 4350 0    50   Input ~ 0
+GND
+Text HLabel 4850 3075 2    50   Input ~ 0
+VOUT
+Text HLabel 5475 4325 0    50   Input ~ 0
+~RE
+Text HLabel 5675 4225 0    50   Input ~ 0
+DE
+Text HLabel 5675 4725 0    50   Input ~ 0
+GND
+Text HLabel 5875 3925 0    50   Input ~ 0
+DI
+Text HLabel 5875 4025 0    50   Input ~ 0
+RO
+Text HLabel 6275 3075 0    50   Input ~ 0
+VIN
+Text HLabel 7175 4025 2    50   Input ~ 0
+A
+Text HLabel 7175 4225 2    50   Input ~ 0
+B
+$Comp
+L power:GND #PWR?
+U 1 1 54DF0CCD
+P 6525 3375
+F 0 "#PWR?" H 6525 3125 60  0001 C CNN
+F 1 "GND" H 6525 3225 60  0000 C CNN
+F 2 "" H 6525 3375 60  0000 C CNN
+F 3 "" H 6525 3375 60  0000 C CNN
+	1    6525 3375
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R16
+U 1 1 5D8F7219
+P 4050 4050
+F 0 "R16" H 3981 4004 50  0000 R CNN
+F 1 "1M" H 3981 4095 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3980 4050 50  0001 C CNN
+F 3 "~" H 4050 4050 50  0001 C CNN
+	1    4050 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R10
+U 1 1 5DC0D0CD
+P 4200 3900
+F 0 "R10" V 3993 3900 50  0000 C CNN
+F 1 "150" V 4084 3900 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4130 3900 50  0001 C CNN
+F 3 "~" H 4200 3900 50  0001 C CNN
+	1    4200 3900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 5D8C5F68
+P 4350 3225
+F 0 "R8" H 4281 3179 50  0000 R CNN
+F 1 "1M" H 4281 3270 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4280 3225 50  0001 C CNN
+F 3 "~" H 4350 3225 50  0001 C CNN
+	1    4350 3225
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 58FF80B2
+P 5475 3675
+F 0 "R3" V 5555 3675 50  0000 C CNN
+F 1 "1M" V 5482 3676 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5405 3675 30  0001 C CNN
+F 3 "" H 5475 3675 30  0000 C CNN
+F 4 "Generic 5% resistor" H 5475 3675 50  0001 C CNN "Comment"
+	1    5475 3675
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R9
+U 1 1 58FEF0D0
+P 5675 4575
+F 0 "R9" V 5755 4575 50  0000 C CNN
+F 1 "1M" V 5682 4576 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5605 4575 30  0001 C CNN
+F 3 "" H 5675 4575 30  0000 C CNN
+F 4 "Generic 5% resistor" H 5675 4575 50  0001 C CNN "Comment"
+	1    5675 4575
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C12
+U 1 1 54DF0C76
+P 6525 3225
+F 0 "C12" H 6575 3325 50  0000 L CNN
+F 1 "1u" H 6575 3125 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6563 3075 30  0001 C CNN
+F 3 "" H 6525 3225 60  0000 C CNN
+F 4 "Generic X5R capacitor" H 6525 3225 50  0001 C CNN "Comment"
+	1    6525 3225
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Q_NMOS_GSD Q2
+U 1 1 5C9CE926
+P 4550 3900
+F 0 "Q2" H 4756 3900 50  0000 L CNN
+F 1 "Q_NMOS_GSD" H 4756 3855 50  0001 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4750 4000 50  0001 C CNN
+F 3 "~" H 4550 3900 50  0001 C CNN
+F 4 "NTR4003NT1G" H 4550 3900 50  0001 C CNN "PartNo"
+F 5 "ON SEMICONDUCTOR" H 4550 3900 50  0001 C CNN "Manufacturer"
+	1    4550 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Q_PMOS_GSD Q1
+U 1 1 5D8C5F67
+P 4650 3175
+F 0 "Q1" V 4850 3175 50  0000 C CNN
+F 1 "Q_PMOS_GSD" V 4887 3175 50  0001 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4850 3275 29  0001 C CNN
+F 3 "" H 4650 3175 60  0000 C CNN
+F 4 "NX2301P,215 " H 4650 3175 60  0001 C CNN "PartNo"
+F 5 "NXP" H 4650 3175 60  0001 C CNN "Manufacturer"
+F 6 "1894738" H 4650 3175 60  0001 C CNN "Distributor"
+F 7 "Exact as specified" H 4650 3175 50  0001 C CNN "Comment"
+	1    4650 3175
+	0    1    -1   0   
+$EndComp
+$Comp
+L miceuz:SN65HVD U1
+U 1 1 54DF0ADA
+P 6275 4125
+F 0 "U1" H 5975 4475 50  0000 L CNN
+F 1 "SN65HVD72" H 6375 4475 50  0000 L CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 6275 4125 50  0001 C CIN
+F 3 "" H 6275 4125 60  0000 C CNN
+F 4 "SN65HVD72DR" H 6275 4125 60  0001 C CNN "PartNo"
+F 5 "TEXAS INSTRUMENTS" H 6275 4125 60  0001 C CNN "Manufacturer"
+F 6 "2542747" H 6275 4125 60  0001 C CNN "Distributor"
+	1    6275 4125
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
