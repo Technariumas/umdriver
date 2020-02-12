@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 3
+Sheet 3 3
 Title ""
 Date ""
 Rev ""
@@ -24,6 +24,9 @@ Connection ~ 2050 4150
 Connection ~ 2050 4450
 Connection ~ 2450 4000
 Connection ~ 3050 4000
+Connection ~ 3750 3600
+Connection ~ 4050 4300
+Connection ~ 4050 4900
 Connection ~ 4350 3300
 Wire Wire Line
 	1250 2550 4350 2550
@@ -33,6 +36,8 @@ Wire Wire Line
 	1250 4150 1550 4150
 Wire Wire Line
 	1250 4450 1550 4450
+Wire Wire Line
+	1250 4900 4050 4900
 Wire Wire Line
 	1550 4150 2050 4150
 Wire Wire Line
@@ -58,25 +63,82 @@ Wire Wire Line
 Wire Wire Line
 	3050 4000 3600 4000
 Wire Wire Line
+	3200 4300 3300 4300
+Wire Wire Line
 	3750 3500 3750 3600
 Wire Wire Line
 	3750 3600 4350 3600
 Wire Wire Line
+	3900 4300 4050 4300
+Wire Wire Line
+	4050 4300 4100 4300
+Wire Wire Line
 	4350 3300 4350 2550
+Text Notes 5350 4400 2    50   ~ 0
+TODO: bridge footprint!!!
 Text HLabel 1250 2550 0    50   Input ~ 0
 INRUSH_BYPASS
-Text HLabel 1250 3100 0    50   Input ~ 0
-15V
 Text HLabel 1250 4150 0    50   Input ~ 0
 LINE_L
 Text HLabel 1250 4450 0    50   Input ~ 0
 LINE_N
-Text HLabel 3300 4300 0    50   Input ~ 0
-GND
-Text HLabel 3750 3600 0    50   Input ~ 0
-GND
-Text HLabel 3900 4300 2    50   Input ~ 0
-DCBUS
+Text HLabel 1250 4900 0    50   Input ~ 0
+DC_BUS_MON
+$Comp
+L power:+15V #PWR?
+U 1 1 5E475491
+P 1250 3100
+F 0 "#PWR?" H 1250 2950 50  0001 C CNN
+F 1 "+15V" H 1265 3273 50  0000 C CNN
+F 2 "" H 1250 3100 50  0001 C CNN
+F 3 "" H 1250 3100 50  0001 C CNN
+	1    1250 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VBUS #PWR?
+U 1 1 5E473F2B
+P 4100 4300
+F 0 "#PWR?" H 4100 4150 50  0001 C CNN
+F 1 "VBUS" H 4115 4473 50  0000 C CNN
+F 2 "" H 4100 4300 50  0001 C CNN
+F 3 "" H 4100 4300 50  0001 C CNN
+	1    4100 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E47462D
+P 3200 4300
+F 0 "#PWR?" H 3200 4050 50  0001 C CNN
+F 1 "GND" H 3205 4127 50  0000 C CNN
+F 2 "" H 3200 4300 50  0001 C CNN
+F 3 "" H 3200 4300 50  0001 C CNN
+	1    3200 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E474A33
+P 3750 3600
+F 0 "#PWR?" H 3750 3350 50  0001 C CNN
+F 1 "GND" H 3755 3427 50  0000 C CNN
+F 2 "" H 3750 3600 50  0001 C CNN
+F 3 "" H 3750 3600 50  0001 C CNN
+	1    3750 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E47A7E4
+P 4050 5200
+F 0 "#PWR?" H 4050 4950 50  0001 C CNN
+F 1 "GND" H 4055 5027 50  0000 C CNN
+F 2 "" H 4050 5200 50  0001 C CNN
+F 3 "" H 4050 5200 50  0001 C CNN
+	1    4050 5200
+	1    0    0    -1  
+$EndComp
 $Comp
 L Device:R R14
 U 1 1 5E44C44C
@@ -87,6 +149,39 @@ F 2 "Resistors_THT:R_Axial_Power_L20.0mm_W6.4mm_P22.40mm" V 2680 4000 50  0001 C
 F 3 "~" H 2750 4000 50  0001 C CNN
 	1    2750 4000
 	0    -1   1    0   
+$EndComp
+$Comp
+L Device:R R20
+U 1 1 5E476E39
+P 4050 4450
+F 0 "R20" H 4120 4495 50  0000 L CNN
+F 1 "R" H 4120 4405 50  0000 L CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 3980 4450 50  0001 C CNN
+F 3 "~" H 4050 4450 50  0001 C CNN
+	1    4050 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R24
+U 1 1 5E47A2FA
+P 4050 4750
+F 0 "R24" H 4120 4795 50  0000 L CNN
+F 1 "R" H 4120 4705 50  0000 L CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 3980 4750 50  0001 C CNN
+F 3 "~" H 4050 4750 50  0001 C CNN
+	1    4050 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R25
+U 1 1 5E47A5EB
+P 4050 5050
+F 0 "R25" H 4120 5095 50  0000 L CNN
+F 1 "R" H 4120 5005 50  0000 L CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 3980 5050 50  0001 C CNN
+F 3 "~" H 4050 5050 50  0001 C CNN
+	1    4050 5050
+	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R R15
@@ -148,7 +243,7 @@ L Device:D_Bridge_+AA- D5
 U 1 1 5E447224
 P 3600 4300
 F 0 "D5" H 3750 4500 50  0000 L CNN
-F 1 "D_Bridge_+AA-" H 3750 4050 50  0000 L CNN
+F 1 "D_Bridge_+AA-" H 3350 4700 50  0000 L CNN
 F 2 "Diodes_THT:Diode_Bridge_18.5x5.5" H 3600 4300 50  0001 C CNN
 F 3 "~" H 3600 4300 50  0001 C CNN
 	1    3600 4300

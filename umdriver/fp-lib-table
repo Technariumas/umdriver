@@ -1,3 +1,4 @@
 (fp_lib_table
   (lib (name "umdriver")(type "KiCad")(uri "/home/miceuz/Xaltura/universal-motor-driver/umdriver.pretty")(options "")(descr ""))
+  (lib (name "Relay_THT")(type "KiCad")(uri "/usr/share/kicad/modules/Relay_THT.pretty")(options "")(descr ""))
 )

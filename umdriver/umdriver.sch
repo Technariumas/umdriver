@@ -8,7 +8,7 @@ Title ""
 Date ""
 Rev ""
 Comp ""
-Comment1 "Albertas Mickenas"
+Comment1 ""
 Comment2 "albertas@technarium.lt"
 Comment3 ""
 Comment4 ""
@@ -283,6 +283,18 @@ Text Label 2150 3050 0    50   ~ 0
 HINU
 Text Label 2150 3350 0    50   ~ 0
 LINU
+Text Label 2900 5200 2    50   ~ 0
+HINW
+Text Label 2900 5300 2    50   ~ 0
+LINW
+Text Label 2900 5400 2    50   ~ 0
+HINV
+Text Label 2900 5500 2    50   ~ 0
+LINV
+Text Label 2900 5600 2    50   ~ 0
+HINU
+Text Label 2900 5700 2    50   ~ 0
+LINU
 Text Label 3500 5050 0    50   ~ 0
 NTC
 Text Label 4750 4000 0    50   ~ 0
@@ -445,6 +457,17 @@ F 1 "GND" H 9705 5277 50  0000 C CNN
 F 2 "" H 9700 5450 50  0001 C CNN
 F 3 "" H 9700 5450 50  0001 C CNN
 	1    9700 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Graphic:SYM_Flash_Small #SYM1
+U 1 1 5E46DE47
+P 7200 6350
+F 0 "#SYM1" V 7110 6350 50  0001 C CNN
+F 1 "SYM_Flash_Small" V 7290 6350 50  0001 C CNN
+F 2 "Symbols:Symbol_HighVoltage_Type2_CopperTop_Big" H 7200 6325 50  0001 C CNN
+F 3 "~" H 7600 6250 50  0001 C CNN
+	1    7200 6350
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -875,15 +898,29 @@ F 3 "" H 7200 2700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Sheet
-S 1100 4400 1900 1300
+S 700  4400 1900 1450
 U 5E46F0D9
 F0 "Microcontroller" 50
 F1 "mcu.sch" 50
+F2 "NTC" I R 2600 5050 50 
+F3 "ISENSE" I R 2600 4950 50 
+F4 "DC_BUS_MON" I R 2600 4850 50 
+F5 "HINW" I R 2600 5200 50 
+F6 "LINW" I R 2600 5300 50 
+F7 "HINV" I R 2600 5400 50 
+F8 "LINV" I R 2600 5500 50 
+F9 "LINU" I R 2600 5600 50 
+F10 "HINU" I R 2600 5700 50 
+F11 "INRUSH_BYPASS" I R 2600 4500 50 
 $EndSheet
 $Sheet
-S 1100 6000 1900 1250
+S 1100 6450 1900 1250
 U 5E446F00
 F0 "Power Input" 50
 F1 "power-int.sch" 50
+F2 "DC_BUS_MON" I R 3000 6600 50 
+F3 "INRUSH_BYPASS" I R 3000 6750 50 
+F4 "LINE_L" I R 3000 7550 50 
+F5 "LINE_N" I R 3000 7450 50 
 $EndSheet
 $EndSCHEMATC
